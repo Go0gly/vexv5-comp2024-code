@@ -1,24 +1,12 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*    Module:       main.cpp                                                  */
-/*    Author:       googly                                                    */
-/*    Created:      10/31/2024, 3:13:46 PM                                    */
-/*    Description:  V5 project                                                */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
-
 #include "vex.h"
 #include<iostream>
 
 using namespace vex;
 
-
 competition Competition;
 
 // defining constants
-
-// controller
-controller playerController = controller();
+controller playerController = controller(); // controller
 
 // left motors
 motor frontLeftMotor = motor(PORT1);
@@ -30,11 +18,9 @@ motor frontRightMotor = motor(PORT6);
 motor rightMotor = motor(PORT7);
 motor backRightMotor = motor(PORT8);
 
-// left half of drivetrain
-motor leftMotors[] = {frontLeftMotor, leftMotor, backLeftMotor};
+motor leftMotors[] = {frontLeftMotor, leftMotor, backLeftMotor}; // left half of drivetrain
 
-// right half of drivetrain
-motor rightMotors[] = {frontRightMotor, rightMotor, backRightMotor};
+motor rightMotors[] = {frontRightMotor, rightMotor, backRightMotor}; // right half of drivetrain
 
 void pre_auton(void) {
 
