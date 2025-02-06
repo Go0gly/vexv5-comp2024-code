@@ -26,7 +26,7 @@ void opcontrol()
     pros::Motor leftMotor(LEFT_MOTOR_PORT);            // Middle left drivetrain motor
     pros::Motor backLeftMotor(BACK_LEFT_MOTOR_PORT);   // Back left drivetrain motor
 
-    pros::Motor conveyorBelt(7); // Conveyor belt
+    pros::Motor conveyorBelt(CONVEYOR_MOTOR_PORT); // Conveyor belt
     bool conveyorIsToggled = false;
 
     while (true)
@@ -43,7 +43,7 @@ void opcontrol()
 
         if (conveyorIsToggled)
         {
-            conveyorBelt.move(12);
+            conveyorBelt.move(CONVEYOR_VOLTAGE);
         }
         else
         {
