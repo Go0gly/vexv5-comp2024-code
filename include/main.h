@@ -15,6 +15,16 @@
 #ifndef _PROS_MAIN_H_
 #define _PROS_MAIN_H_
 
+#define FRONT_RIGHT_MOTOR_PORT 1
+#define RIGHT_MOTOR_PORT 2
+#define BACK_RIGHT_MOTOR_PORT 3
+
+#define FRONT_LEFT_MOTOR_PORT 4
+#define LEFT_MOTOR_PORT 5
+#define BACK_LEFT_MOTOR_PORT 6
+
+#define CONVEYOR_MOTOR_PORT 7
+
 /**
  * If defined, some commonly used enums will have preprocessor macros which give
  * a shorter, more convenient naming pattern. If this isn't desired, simply
@@ -39,7 +49,7 @@
 /**
  * You should add more #includes here
  */
-//#include "okapi/api.hpp"
+// #include "okapi/api.hpp"
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do
@@ -59,13 +69,14 @@
  * button press in opcontrol() for testing purposes).
  */
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
-void autonomous(void);
-void initialize(void);
-void disabled(void);
-void competition_initialize(void);
-void opcontrol(void);
+    void autonomous(void);
+    void initialize(void);
+    void disabled(void);
+    void competition_initialize(void);
+    void opcontrol(void);
 #ifdef __cplusplus
 }
 #endif
@@ -74,7 +85,7 @@ void opcontrol(void);
 /**
  * You can add C++-only headers here
  */
-//#include <iostream>
+// #include <iostream>
 #endif
 
-#endif  // _PROS_MAIN_H_
+#endif // _PROS_MAIN_H_

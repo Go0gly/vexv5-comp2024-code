@@ -18,13 +18,13 @@ void opcontrol()
     // The controller object for operator control
     pros::Controller masterController(pros::E_CONTROLLER_MASTER);
 
-    pros::Motor frontRightMotor(1); // Front right drivetrain motor
-    pros::Motor rightMotor(2);      // Middle right drivetrain motor
-    pros::Motor backRightMotor(3);  // Back right drivetrain motor
+    pros::Motor frontRightMotor(FRONT_RIGHT_MOTOR_PORT); // Front right drivetrain motor
+    pros::Motor rightMotor(RIGHT_MOTOR_PORT);            // Middle right drivetrain motor
+    pros::Motor backRightMotor(BACK_RIGHT_MOTOR_PORT);   // Back right drivetrain motor
 
-    pros::Motor frontLeftMotor(4); // Front left drivetrain motor
-    pros::Motor leftMotor(5);      // Middle left drivetrain motor
-    pros::Motor backLeftMotor(6);  // Back left drivetrain motor
+    pros::Motor frontLeftMotor(FRONT_LEFT_MOTOR_PORT); // Front left drivetrain motor
+    pros::Motor leftMotor(LEFT_MOTOR_PORT);            // Middle left drivetrain motor
+    pros::Motor backLeftMotor(BACK_LEFT_MOTOR_PORT);   // Back left drivetrain motor
 
     pros::Motor conveyorBelt(7); // Conveyor belt
     bool conveyorIsToggled = false;
