@@ -26,6 +26,9 @@ void opcontrol()
     pros::Motor leftMotor(5);      // Middle left drivetrain motor
     pros::Motor backLeftMotor(6);  // Back left drivetrain motor
 
+    pros::Motor conveyorBelt(7); // Conveyor belt
+    bool conveyorIsToggled = false;
+
     while (true)
     {
         // Move left portion of the drivetrain based on the left joystick
@@ -37,6 +40,15 @@ void opcontrol()
         frontLeftMotor.move(masterController.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y));
         leftMotor.move(masterController.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y));
         backLeftMotor.move(masterController.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y));
+
+        if (conveyorIsToggled)
+        {
+            conveyorBelt.move(12);
+        }
+        else
+        {
+            conveyorBelt.brake();
+        }
 
         pros::delay(20); // Run for 20 ms then update
     }
